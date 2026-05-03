@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+
+    <div class="wrapper">
+
+        <header>
+            <div class="brand">
+                <span class="brand-dot"></span>
+                RGB<span class="brand-accent">GUESS</span>
+            </div>
+            <div class="score-pill">
+                <span class="score-label">STREAK</span>
+                <span id="score">0</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="challenge-card">
+                <p class="instruction">Which swatch matches this color?</p>
+                <div class="color-code-wrap">
+                    <span class="code-prefix">rgb</span>
+                    <span id="color-code" class="color-code">—</span>
+                </div>
+                <div id="color-preview" class="color-preview"></div>
+            </div>
+
+            <div id="option-container" class="option-container"></div>
+
+            <div id="feedback" class="feedback hidden"></div>
+
+            <button class="skip-btn" onclick="startGame()">Skip →</button>
+        </main>
+
+        <footer>
+            <span>Best streak stored locally · Score resets on wrong answer</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
